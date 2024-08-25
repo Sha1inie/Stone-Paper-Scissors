@@ -1,38 +1,28 @@
-*{
+* {
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
-h1{
+h1 {
     background-color: #081b31;
     color: #fff;
     height: 3rem;
     line-height: 3rem;
-}
-/* Overlay for darkening the background video */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(23, 13, 13, 0.432); /* Darkening effect */
-    z-index: -1; /* Ensure it's behind the choices but above the video */
+    margin-top: 0px;
 }
 
-
-.choices{
+.choices {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 4rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
-.choice{
+.choice {
     height: 165px;
     width: 165px;
     border-radius: 50%;
@@ -41,65 +31,91 @@ h1{
     justify-content: center;
 }
 
-.choice:hover{
+.choice:hover {
     cursor: pointer;
     background-color: #081b31;
 }
 
-img{
+img {
     height: 150px;
     width: 150px;
     object-fit: cover;
-     border-radius: 50%;
+    border-radius: 50%;
 }
 
-.score-board{
+.score-board {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
     gap: 5rem;
     color: whitesmoke;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-#user-score, #comp-score{
+#user-score, #comp-score {
     font-size: 2.5rem;
 }
 
-.msg-container{
-    margin-top: 3.5rem;
+.msg-container {
+    margin-top: 2rem;
 }
 
-#msg{
-    margin-top: 3rem;
+#msg {
     background-color: #081b31;
     color: #fff;
     font-size: 1.5rem;
-    display: inline;
     padding: 1rem;
     border-radius: 1rem;
+    display: inline-block;
 }
 
-.background-clip{
-position: absolute;
-right: 0;
-bottom: 0;
-z-index: -2;
+.background-clip {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
 }
 
-@media (min-aspect-ratio:16/9){
-    .background-clip{
-        width: 100%;
-        height: auto;
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+        height: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+    .choices {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 1.5rem;
+    }
+
+    .choice {
+        height: 100px;
+        width: 100px;
+    }
+
+    img {
+        height: 90px;
+        width: 90px;
+    }
+
+    .score-board {
+        font-size: 1.5rem;
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+
+    #user-score, #comp-score {
+        font-size: 2rem;
+    }
+
+    #msg {
+        font-size: 1rem;
+        padding: 0.5rem;
+        margin-top: 1rem;
     }
 }
 
-@media (max-aspect-ratio:16/9){
-    .background-clip{
-        width: auto;
-        height: 100%;
-    }
-}
+
